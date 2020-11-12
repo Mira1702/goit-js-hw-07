@@ -6,19 +6,28 @@ const ingredients = [
     'Зелень',
     'Приправы',
 ];
-const creatList = ingredients =>{
-const containerRef = document.createElement(`ul`); //создает элемент ul
-const linkRef = document.createElement(`li`); //создает элемент списка li
-linkRef.textContent = ingredients; //добавляет в список текст-содержимое
-containerRef.append(linkRef); //добавляет li в ul
-return containerRef;
-}
+const creatListRootRef = document.querySelector('#ingredients');
+ingredients.forEach(element => {
+    console.log(element);
+    const linkRef = document.createElement(`li`); //создает элемент списка li
+    linkRef.textContent = element; //добавляет в список текст-содержимое
+    creatListRootRef.append(linkRef); //добавляет li в ul
+    }
+)
 
-const creatListRootRef = document.querySelector('#ingredients');//добавляет созданный элемент в DOM
+//Задание
+/* В HTML есть пустой список ul#ingredients.
 
-creatListRootRef.appendChild(creatList(ingredients[0]));
-creatListRootRef.appendChild(creatList(ingredients[1]));
-creatListRootRef.appendChild(creatList(ingredients[2]));
-creatListRootRef.appendChild(creatList(ingredients[3]));
-creatListRootRef.appendChild(creatList(ingredients[4]));
-creatListRootRef.appendChild(creatList(ingredients[5]));
+<ul id="ingredients"></ul>
+В JS есть массив строк.
+
+const ingredients = [
+  'Картошка',
+  'Грибы',
+  'Чеснок',
+  'Помидоры',
+  'Зелень',
+  'Приправы',
+];
+Напиши скрипт, который для каждого элемента массива ingredients создаст отдельный li, 
+после чего вставит все li за одну операцию в список ul.ingredients. Для создания DOM-узлов используй document.createElement(). */
