@@ -1,25 +1,11 @@
-const nameInput = document.querySelector('#name-input');
-nameInput.addEventListener('keydown', element => {
-    if (element.code === 'Enter') {
-    console.log(element.target.value)        
-    }    
-    render()
+const inputRef = document.querySelector('#name-input');
+const inputNameRef = document.querySelector('span#name-output')
+
+inputRef.addEventListener('input', event =>{
+    inputNameRef.textContent = event.target.value;
 })
-function render () {
-    ref.htmlValue.textContent = nameInput;
-}
-const ref = {
-    htmlValue: document.querySelector('span#name-output')
-}
-console.log (nameInput)
 
-
-
-/* nameInput.addEventListener('keypress', () => {
-    console.log('keypress')
-})
-nameInput.addEventListener('keyup', {
-        console.log('keyup', element)
-    }    
-}) */
-
+//Задача
+/* Напиши скрипт который, при наборе текста в инпуте input#name-input (событие input), 
+подставляет его текущее значение в span#name-output. Если инпут пустой,
+ в спане должна отображаться строка 'незнакомец'. */
