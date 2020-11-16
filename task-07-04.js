@@ -19,8 +19,8 @@ const ref ={
 }
 ref.buttonDecrement.addEventListener('click', decrement);
 ref.buttonIncrement.addEventListener('click', increment);
-ref.buttonDecrement.addEventListener('handler', decrement);
-ref.buttonIncrement.addEventListener('handler', increment);
+/* ref.buttonDecrement.addEventListener('handler', decrement);
+ref.buttonIncrement.addEventListener('handler', increment); */
 
 //Задание
 /* Счетчик состоит из спана и кнопок, которые должны увеличивать и уменьшать значение счетчика на 1.
